@@ -20,7 +20,7 @@ export function download(): FastifyPluginAsync {
       '/download',
       {
         schema,
-        preHandler: server.auth([server.verifyToken]),
+        preHandler: server.auth([server.verifySession]),
       },
       async (request, reply) => {
         const { uri } = request.body;
