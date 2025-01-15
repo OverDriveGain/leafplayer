@@ -31,6 +31,7 @@ import { getRandomAlbum } from './routes/discover/getRandomAlbum';
 import { createSearchHistoryEntry } from './routes/search/createHistoryEntry';
 import { findSearchHistoryEntries } from './routes/search/findHistoryEntries';
 import { deleteSearchHistoryEntry } from './routes/search/deleteHistoryEntry';
+import { download } from './routes/download';
 
 export function initApi(container: AwilixContainer): FastifyPluginAsync {
   const authPlugin = container.build(createSessionAuthPlugin);
@@ -75,5 +76,6 @@ export function initApi(container: AwilixContainer): FastifyPluginAsync {
 
     await server.register(container.build(getArtwork));
     await server.register(container.build(getAudioStream));
+    await server.register(container.build(download));
   };
 }

@@ -8,6 +8,7 @@ import {
 } from './modules/auth';
 import Wrapper from './components/Wrapper/Wrapper';
 import Register from './views/Register';
+import Download from './views/Download';
 import { NotificationProvider } from 'modules/notifications/NotificationProvider';
 import { ThemeProvider } from 'modules/theming/ThemeProvider';
 
@@ -24,9 +25,8 @@ function App(): ReactElement {
                 path="/register"
                 component={Register}
               />
-
+              <AuthenticatedRoute exact path="/download" component={Download} />
               <AuthenticatedRoute path="/" component={Wrapper} />
-
               <Route render={() => <span>404 Not found</span>}></Route>
             </Switch>
           </Router>
