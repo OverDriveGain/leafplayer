@@ -14,7 +14,8 @@
     "test": "ava",
     "test:watch": "ava --watch",
     "make-migration": "knex migrate:make -x ts --migrations-directory=lib/database/migrations",
-    "release": "npx standard-version"
+    "release": "npx standard-version",
+    "adduser": "ts-node main.ts users:add --username admin --password supersecret"
   },
   "engines": {
     "node": ">14.0.0 <15"
