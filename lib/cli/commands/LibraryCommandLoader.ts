@@ -10,7 +10,7 @@ import { LibraryService } from '@/services/LibraryService';
 
 import { CommandLoader } from '../CommandLoader';
 
-type Config = {
+export type Config = {
   storageDir: string;
 };
 
